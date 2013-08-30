@@ -1,11 +1,25 @@
+body {
+  background: #ff8;
+}
+
 .splash {
   background: #0cc;
   text-align: center;
+}
+
+.splash h1 {
+  line-height: 6;
 }
 
 #house img {
   display: block;
   width: 240px;
   height: auto;
-  margin: 0 auto;
+  margin: 16px auto;
+}
+
+@media all and (max-width: 770px) {
+  .splash h1 {
+    line-height: 1;
+  }
 }
