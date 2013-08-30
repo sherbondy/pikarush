@@ -1,0 +1,11 @@
+.splash {
+  background: #0cc;
+  text-align: center;
+}
+
+#house img {
+  display: block;
+  width: 240px;
+  height: auto;
+  margin: 0 auto;
+}
