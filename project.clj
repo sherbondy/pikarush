@@ -1,6 +1,7 @@
 (defproject pikarush "0.0.1"
   :description "pika rush website 2013"
-  :dependencies [[prismatic/dommy "0.1.1"]]
+  :dependencies [[prismatic/dommy "0.1.1"]
+                 [cljs-ajax "0.2.0"]]
   :plugins [[lein-cljsbuild "0.3.2"]]
 
   :cljsbuild
