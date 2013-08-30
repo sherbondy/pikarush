@@ -2,6 +2,10 @@ body {
   background: #ff8;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .splash {
   background: #0078e7;
   text-align: center;
@@ -46,4 +50,15 @@ body {
   .splash h1 {
     line-height: 1;
   }
+}
+
+footer {
+  background: #111;
+  color: #666;
+  padding: 16px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
 }
