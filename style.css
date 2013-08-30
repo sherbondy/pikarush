@@ -3,12 +3,23 @@ body {
 }
 
 .splash {
-  background: #0cc;
+  background: #0078e7;
   text-align: center;
 }
 
 .splash h1 {
   line-height: 6;
+  color: #fff;
+  text-shadow: 0px 1px 0px #000;
+}
+
+#menu {
+  overflow: hidden;
+}
+
+#call {
+  display: block;
+  float: right;
 }
 
 #house img {
@@ -16,6 +27,19 @@ body {
   width: 240px;
   height: auto;
   margin: 16px auto;
+}
+
+.content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.content .l-box {
+  margin: 0 16px;
+}
+
+.content-ribbon {
+  border-top: 1px solid #ccc;
 }
 
 @media all and (max-width: 770px) {

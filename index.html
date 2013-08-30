@@ -8,15 +8,11 @@
 <body>
 
 <div class="header">
-	<div class="pure-menu pure-menu-open pure-menu-horizontal">
+	<div id="menu" class="pure-menu pure-menu-open pure-menu-horizontal">
         <a class="pure-menu-heading"
            href="https://www.google.com/maps/preview#!data=!4m29!3m28!1m5!1sMassachusetts+Institute+of+Technology%2C+77+Massachusetts+Ave%2C+Cambridge%2C+MA+02139!2s0x89e370aaf51a6a87%3A0xd0e08ea5b308203c!3m2!3d42.358867!4d-71.093825!1m5!1s69+Chestnut+St%2C+Cambridge%2C+MA+02139!2s0x89e379fca43a4225%3A0x4d2661561756d574!3m2!3d42.3564484!4d-71.1082124!2e2!3m8!1m3!1d10073!2d-71.1019779!3d42.3590758!3m2!1i1360!2i656!4f13.1!6m2!1m1!1e4!8m2!1e1!2b1!6m1!1e1&fid=0i1">
             69 Chestnut St, Cambridge</a>
-    	<ul>
-            <li>
-            	<a href="tel://617-433-7452">Call 617-IFF-PIKA for a ride!</a>
-            </li>
-        </ul>
+        <a id="call" href="tel://617-433-7452">Call 617-IFF-PIKA for a ride!</a>
     </div>
 </div>
 
@@ -58,7 +54,8 @@
         <p>Every night we have dinner at 7:00, and anyone from the MIT undergraduate community is welcome to come.</p>
 
         <p>Feel free to email pika-questions@mit.edu with questions.</p>
-
+    </div>
+    <div class="l-box content-ribbon">
         <h3 class="content-subhead">rush events</h3>
 
         <ul class="pure-paginator">
@@ -74,8 +71,12 @@
     </div>
 
     <div class="l-box content-ribbon">
-        <p>Sign up for our rush email list to learn
-            about upcoming events:</p>
+        <p>Sign up for our events email list:</p>
+
+        <form class="pure-form">
+            <input type="text" name="email" class="pure-input-1-2" placeholder="Your Email">
+            <button type="submit" class="pure-button pure-button-primary">Add me!</button>
+        </form>
 
 
         <p>Or befriend
