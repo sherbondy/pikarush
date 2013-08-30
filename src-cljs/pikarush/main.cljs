@@ -7,8 +7,8 @@
    [goog.date.Date :as Date]
    [goog.date.DateRange :as DateRange]))
 
-(def start-date (goog/date.Date. 2013 8 31))
-(def end-date (goog/date.Date. 2013 9 7))
+(def start-date (goog/date.Date. 2013 7 31))
+(def end-date (goog/date.Date. 2013 8 7))
 (def rush-dates (goog/date.DateRange. start-date end-date))
 
 (def now (atom (js/Date.)))
