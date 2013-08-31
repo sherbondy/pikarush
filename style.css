@@ -99,13 +99,14 @@ footer a {
 }
 
 #event-list h3 {
-  margin: 8px 24px;
+  margin: 8px;
   text-align: right;
   line-height: 2;
 }
 
 .event a {
   overflow: hidden;
+  text-decoration: none;
 }
 
 .event .description {
@@ -113,8 +114,12 @@ footer a {
   background: #fff;
   padding: 16px;
 }
-.event.active .description {
+.event.active .description,
+.event.now .description {
   display: block;
+}
+.description p:first-child {
+  margin-top: 0;
 }
 
 .event {
@@ -129,14 +134,19 @@ footer a {
   color: #fff;
 }
 
+.event.now h4 {
+  background: #000;
+}
+
 .event .time {
   display: block;
   float: right;
   background: #fff;
-  border-radius: 8px;
-  padding: 4px 8px;
+  line-height: 1;
+  padding: 16px 8px 15px 8px;
+  margin-left: 8px;
+  border-bottom: 1px solid #0078e7;
   font-size: 16px;
-  margin-right: 8px;
-  font-weight: normal;
+  font-family: "Courier New", Courier, monospace;
   color: #000;
 }
