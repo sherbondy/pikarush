@@ -23,7 +23,7 @@
     (try
       (let [next (.next iterator)]
         (recur iterator (conj s next)))
-      (catch js/Error e
+      (catch js/Object e
         s))))
 
 (def today (atom (goog/date.Date.)))
