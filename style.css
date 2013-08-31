@@ -36,7 +36,7 @@ h4 {
 .splash h1 {
   line-height: 1;
   color: #fff;
-  text-shadow: 0px 1px 0px #000;
+  text-shadow: 0px 1px 0px #111;
   font-size: 96px;
 }
 
@@ -135,7 +135,7 @@ footer a {
 }
 
 .event.now h4 {
-  background: #000;
+  background: #111;
 }
 
 .event .time {
@@ -148,5 +148,12 @@ footer a {
   border-bottom: 1px solid #0078e7;
   font-size: 16px;
   font-family: "Courier New", Courier, monospace;
-  color: #000;
+  color: #111;
+}
+
+#random-photo {
+  display: block;
+  max-height: 480px;
+  max-width: 100%;
+  margin: 16px auto;
 }

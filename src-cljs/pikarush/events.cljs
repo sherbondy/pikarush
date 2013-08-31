@@ -127,7 +127,7 @@
     :location "pika and the streets"
     :description "Wander the streets in a peculiarly philosophical French manner."
     :date "09/02"
-    :time ["09:30", "11:00"]
+    :time ["9:30", "11:00"]
   }
   {
     :name "Mural Painting"

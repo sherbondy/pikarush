@@ -4,7 +4,7 @@
  (:require
    [ajax.core :refer [GET]]
    [clojure.string :as str]
-   [dommy.attrs :refer [attr toggle-class!]]
+   [dommy.attrs :refer [attr set-attr! toggle-class!]]
    [dommy.core :as dommy]
    [goog.date.Date :as Date]
    [goog.date.DateRange :as DateRange]
@@ -119,17 +119,25 @@
   (doseq [elem (sel ".event")]
     (dommy/listen! elem :click (toggle-event-descr elem))))
 
-;; make it september 2 for testing
+;; make it september 3 for testing
 (defn time-machine []
   (reset! today (goog/date.Date. 2013 8 3))
   (reset! now (js/Date. 2013 8 3 19 30)))
 
-;; here we go
-(render-events)
+(def photos
+  ["boat" "costume" "desi" "dinner" "fort"
+   "fronthouse" "lion" "porch" "roofdeck" "treehouse"])
+
+(def photo-elem (sel1 :#random-photo))
 
 (add-watch now :re-render
  (fn [k r o n]
-   (render-events)))
+   (render-events)
+   (dommy/set-attr! photo-elem "src"
+                    (str "photos/" (rand-nth photos) ".jpg"))))
 
 ;; update the schedule every thirty minutes
 (js/setInterval tick! (* 1000 60 30))
+
+;; here we go
+(tick!)
