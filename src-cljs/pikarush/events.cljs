@@ -60,7 +60,7 @@
   {
     :name "Literary Mixtape"
     :location "pika dining room"
-    :description "\"If it's true that as I'm talking to you bones are moving in your inner ears, I'm physically touching you with my voice.\" (Etheridge Knight)"
+    :description "\"If it's true that as I'm talking to you bones are moving in your inner ears, I'm physically touching you with my voice.\" (Etheridge Knight)  Bring your favorite poems or excerpts from books to read aloud and share!"
     :date "08/31"
     :time ["21:30", "23:00"]
   }

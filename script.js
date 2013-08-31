@@ -4928,110 +4928,42 @@ Sh.a = Th;
 Sh.b = Uh;
 Sh.e = Wh.e;
 Rh = Sh;
-var Xh, Yh, Zh, $h;
-function ai() {
-  return da.navigator ? da.navigator.userAgent : m
-}
-$h = Zh = Yh = Xh = n;
-var bi;
-if(bi = ai()) {
-  var ci = da.navigator;
-  Xh = 0 == bi.indexOf("Opera");
-  Yh = !Xh && -1 != bi.indexOf("MSIE");
-  Zh = !Xh && -1 != bi.indexOf("WebKit");
-  $h = !Xh && !Zh && "Gecko" == ci.product
-}
-var di = Xh, ei = Yh, fi = $h, gi = Zh, hi;
-a: {
-  var ii = "", ji;
-  if(di && da.opera) {
-    var ki = da.opera.version, ii = "function" == typeof ki ? ki() : ki
-  }else {
-    if(fi ? ji = /rv\:([^\);]+)(\)|;)/ : ei ? ji = /MSIE\s+([^\);]+)(\)|;)/ : gi && (ji = /WebKit\/(\S+)/), ji) {
-      var li = ji.exec(ai()), ii = li ? li[1] : ""
-    }
-  }
-  if(ei) {
-    var mi, ni = da.document;
-    mi = ni ? ni.documentMode : h;
-    if(mi > parseFloat(ii)) {
-      hi = String(mi);
-      break a
-    }
-  }
-  hi = ii
-}
-var oi = {};
-function pi(a) {
-  var b;
-  if(!(b = oi[a])) {
-    b = 0;
-    for(var c = ja(String(hi)).split("."), d = ja(String(a)).split("."), f = Math.max(c.length, d.length), g = 0;0 == b && g < f;g++) {
-      var j = c[g] || "", i = d[g] || "", k = RegExp("(\\d*)(\\D*)", "g"), p = RegExp("(\\d*)(\\D*)", "g");
-      do {
-        var x = k.exec(j) || ["", "", ""], s = p.exec(i) || ["", "", ""];
-        if(0 == x[0].length && 0 == s[0].length) {
-          break
-        }
-        b = ((0 == x[1].length ? 0 : parseInt(x[1], 10)) < (0 == s[1].length ? 0 : parseInt(s[1], 10)) ? -1 : (0 == x[1].length ? 0 : parseInt(x[1], 10)) > (0 == s[1].length ? 0 : parseInt(s[1], 10)) ? 1 : 0) || ((0 == x[2].length) < (0 == s[2].length) ? -1 : (0 == x[2].length) > (0 == s[2].length) ? 1 : 0) || (x[2] < s[2] ? -1 : x[2] > s[2] ? 1 : 0)
-      }while(0 == b)
-    }
-    b = oi[a] = 0 <= b
-  }
-  return b
-}
-var qi = {};
-function ri() {
-  qi[9] || (qi[9] = ei && !!document.documentMode && 9 <= document.documentMode)
-}
-;!ei || ri();
-!ei || ri();
-ei && pi("8");
-!gi || pi("528");
-fi && pi("1.9b") || ei && pi("8") || di && pi("9.5") || gi && pi("528");
-fi && !pi("8") || ei && pi("9");
-var si = "StopIteration" in da ? da.StopIteration : Error("StopIteration");
-function ti() {
-}
-ti.prototype.next = function() {
-  e(si)
-};
-function ui(a, b) {
+function Xh(a, b) {
   e(Error(U.a(I, b)))
 }
-function vi(a, b) {
+function Yh(a, b) {
   var c = m;
   1 < arguments.length && (c = P(Array.prototype.slice.call(arguments, 1), 0));
-  return ui.call(this, 0, c)
+  return Xh.call(this, 0, c)
 }
-vi.m = 1;
-vi.h = function(a) {
+Yh.m = 1;
+Yh.h = function(a) {
   M(a);
   a = N(a);
-  return ui(0, a)
+  return Xh(0, a)
 };
-vi.e = ui;
+Yh.e = Xh;
 dh("([-+]?)(?:(0)|([1-9][0-9]*)|0[xX]([0-9A-Fa-f]+)|0([0-7]+)|([1-9][0-9]?)[rR]([0-9A-Za-z]+)|0[0-9]+)(N)?");
 dh("([-+]?[0-9]+)/([0-9]+)");
 dh("([-+]?[0-9]+(\\.[0-9]*)?([eE][-+]?[0-9]+)?)(M)?");
 dh("[:]?([^0-9/].*/)?([^0-9/][^/]*)");
 dh("[0-9A-Fa-f]{2}");
 dh("[0-9A-Fa-f]{4}");
-function wi(a) {
+function Zh(a) {
   var b = 0 === (a % 4 + 4) % 4;
   return v(b) ? (b = va(0 === (a % 100 + 100) % 100), v(b) ? b : 0 === (a % 400 + 400) % 400) : b
 }
-var xi, yi = Y([m, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]), zi = Y([m, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]);
-xi = function(a, b) {
-  return T.a(v(b) ? zi : yi, a)
+var $h, ai = Y([m, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]), bi = Y([m, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]);
+$h = function(a, b) {
+  return T.a(v(b) ? bi : ai, a)
 };
-var Ai, ch = /(\d\d\d\d)(?:-(\d\d)(?:-(\d\d)(?:[T](\d\d)(?::(\d\d)(?::(\d\d)(?:[.](\d+))?)?)?)?)?)?(?:[Z]|([-+])(\d\d):(\d\d))?/;
-function Bi(a, b, c, d) {
+var ci, ch = /(\d\d\d\d)(?:-(\d\d)(?:-(\d\d)(?:[T](\d\d)(?::(\d\d)(?::(\d\d)(?:[.](\d+))?)?)?)?)?)?(?:[Z]|([-+])(\d\d):(\d\d))?/;
+function di(a, b, c, d) {
   var f = a <= b;
   (f ? b <= c : f) || e(Error([I("Assert failed: "), I([I(d), I(" Failed:  "), I(a), I("<="), I(b), I("<="), I(c)].join("")), I("\n"), I(lh.e(P([tc(Ob(new rb(m, "<=", "<=", -1640529606, m), new rb(m, "low", "low", -1640424179, m), new rb(m, "n", "n", -1640531417, m), new rb(m, "high", "high", -1637329061, m)), oc("\ufdd0:line", 474, "\ufdd0:column", 25))], 0)))].join("")));
   return b
 }
-Ai = function(a) {
+ci = function(a) {
   var b = se.a(xf, Ce(bh(a)));
   if(v(b)) {
     var c = S.b(b, 0, m);
@@ -5061,7 +4993,7 @@ Ai = function(a) {
     }]), b)), x = S.b(p, 0, m);
     S.b(x, 0, m);
     var b = S.b(x, 1, m), k = S.b(x, 2, m), s = S.b(x, 3, m), B = S.b(x, 4, m), A = S.b(x, 5, m), F = S.b(x, 6, m), x = S.b(x, 7, m), L = S.b(p, 1, m), p = S.b(L, 0, m), X = S.b(L, 1, m), L = S.b(L, 2, m);
-    return Y([va(a) ? 1970 : b, va(d) ? 1 : Bi(1, k, 12, "timestamp month field must be in range 1..12"), va(f) ? 1 : Bi(1, s, xi.a ? xi.a(k, wi(b)) : xi.call(m, k, wi(b)), "timestamp day field must be in range 1..last day in month"), va(g) ? 0 : Bi(0, B, 23, "timestamp hour field must be in range 0..23"), va(j) ? 0 : Bi(0, A, 59, "timestamp minute field must be in range 0..59"), va(i) ? 0 : Bi(0, F, wb.a(A, 59) ? 60 : 59, "timestamp second field must be in range 0..60"), va(c) ? 0 : Bi(0, x, 999, 
+    return Y([va(a) ? 1970 : b, va(d) ? 1 : di(1, k, 12, "timestamp month field must be in range 1..12"), va(f) ? 1 : di(1, s, $h.a ? $h.a(k, Zh(b)) : $h.call(m, k, Zh(b)), "timestamp day field must be in range 1..last day in month"), va(g) ? 0 : di(0, B, 23, "timestamp hour field must be in range 0..23"), va(j) ? 0 : di(0, A, 59, "timestamp minute field must be in range 0..59"), va(i) ? 0 : di(0, F, wb.a(A, 59) ? 60 : 59, "timestamp second field must be in range 0..60"), va(c) ? 0 : di(0, x, 999, 
     "timestamp millisecond field must be in range 0..999"), p * (60 * X + L)])
   }
   return m
@@ -5069,23 +5001,91 @@ Ai = function(a) {
 nh.c(u(["inst", function(a) {
   var b;
   if(wa(a)) {
-    if(b = Ai.c ? Ai.c(a) : Ai.call(m, a), v(b)) {
+    if(b = ci.c ? ci.c(a) : ci.call(m, a), v(b)) {
       var a = S.b(b, 0, m), c = S.b(b, 1, m), d = S.b(b, 2, m), f = S.b(b, 3, m), g = S.b(b, 4, m), j = S.b(b, 5, m), i = S.b(b, 6, m);
       b = S.b(b, 7, m);
       b = new Date(Date.UTC(a, c - 1, d, f, g, j, i) - 6E4 * b)
     }else {
-      b = vi.e(m, P([[I("Unrecognized date/time syntax: "), I(a)].join("")], 0))
+      b = Yh.e(m, P([[I("Unrecognized date/time syntax: "), I(a)].join("")], 0))
     }
   }else {
-    b = vi.e(m, P(["Instance literal expects a string for its timestamp."], 0))
+    b = Yh.e(m, P(["Instance literal expects a string for its timestamp."], 0))
   }
   return b
 }, "uuid", function(a) {
-  return wa(a) ? new wh(a) : vi.e(m, P(["UUID literal expects a string as its representation."], 0))
+  return wa(a) ? new wh(a) : Yh.e(m, P(["UUID literal expects a string as its representation."], 0))
 }, "queue", function(a) {
-  return Dc(a) ? Qe(If, a) : vi.e(m, P(["Queue literal expects a vector for its elements."], 0))
+  return Dc(a) ? Qe(If, a) : Yh.e(m, P(["Queue literal expects a vector for its elements."], 0))
 }]));
 nh.c(m);
+var ei, fi, gi, hi;
+function ii() {
+  return da.navigator ? da.navigator.userAgent : m
+}
+hi = gi = fi = ei = n;
+var ji;
+if(ji = ii()) {
+  var ki = da.navigator;
+  ei = 0 == ji.indexOf("Opera");
+  fi = !ei && -1 != ji.indexOf("MSIE");
+  gi = !ei && -1 != ji.indexOf("WebKit");
+  hi = !ei && !gi && "Gecko" == ki.product
+}
+var li = ei, mi = fi, ni = hi, oi = gi, pi;
+a: {
+  var qi = "", ri;
+  if(li && da.opera) {
+    var si = da.opera.version, qi = "function" == typeof si ? si() : si
+  }else {
+    if(ni ? ri = /rv\:([^\);]+)(\)|;)/ : mi ? ri = /MSIE\s+([^\);]+)(\)|;)/ : oi && (ri = /WebKit\/(\S+)/), ri) {
+      var ti = ri.exec(ii()), qi = ti ? ti[1] : ""
+    }
+  }
+  if(mi) {
+    var ui, vi = da.document;
+    ui = vi ? vi.documentMode : h;
+    if(ui > parseFloat(qi)) {
+      pi = String(ui);
+      break a
+    }
+  }
+  pi = qi
+}
+var wi = {};
+function xi(a) {
+  var b;
+  if(!(b = wi[a])) {
+    b = 0;
+    for(var c = ja(String(pi)).split("."), d = ja(String(a)).split("."), f = Math.max(c.length, d.length), g = 0;0 == b && g < f;g++) {
+      var j = c[g] || "", i = d[g] || "", k = RegExp("(\\d*)(\\D*)", "g"), p = RegExp("(\\d*)(\\D*)", "g");
+      do {
+        var x = k.exec(j) || ["", "", ""], s = p.exec(i) || ["", "", ""];
+        if(0 == x[0].length && 0 == s[0].length) {
+          break
+        }
+        b = ((0 == x[1].length ? 0 : parseInt(x[1], 10)) < (0 == s[1].length ? 0 : parseInt(s[1], 10)) ? -1 : (0 == x[1].length ? 0 : parseInt(x[1], 10)) > (0 == s[1].length ? 0 : parseInt(s[1], 10)) ? 1 : 0) || ((0 == x[2].length) < (0 == s[2].length) ? -1 : (0 == x[2].length) > (0 == s[2].length) ? 1 : 0) || (x[2] < s[2] ? -1 : x[2] > s[2] ? 1 : 0)
+      }while(0 == b)
+    }
+    b = wi[a] = 0 <= b
+  }
+  return b
+}
+var yi = {};
+function zi() {
+  yi[9] || (yi[9] = mi && !!document.documentMode && 9 <= document.documentMode)
+}
+;!mi || zi();
+!mi || zi();
+mi && xi("8");
+!oi || xi("528");
+ni && xi("1.9b") || mi && xi("8") || li && xi("9.5") || oi && xi("528");
+ni && !xi("8") || mi && xi("9");
+var Ai = "StopIteration" in da ? da.StopIteration : Error("StopIteration");
+function Bi() {
+}
+Bi.prototype.next = function() {
+  e(Ai)
+};
 var $ = {Cb:["BC", "AD"], Zb:["Before Christ", "Anno Domini"], bc:"JFMAMJJASOND".split(""), dc:"JFMAMJJASOND".split(""), Db:"January February March April May June July August September October November December".split(" "), cc:"January February March April May June July August September October November December".split(" "), Fb:"Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" "), fc:"Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" "), Ib:"Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split(" "), 
 hc:"Sunday Monday Tuesday Wednesday Thursday Friday Saturday".split(" "), Hb:"Sun Mon Tue Wed Thu Fri Sat".split(" "), gc:"Sun Mon Tue Wed Thu Fri Sat".split(" "), Dc:"SMTWTFS".split(""), ec:"SMTWTFS".split(""), Gb:["Q1", "Q2", "Q3", "Q4"], Eb:["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"], Bb:["AM", "PM"], Na:["EEEE, MMMM d, y", "MMMM d, y", "MMM d, y", "M/d/yy"], Oa:["h:mm:ss a zzzz", "h:mm:ss a z", "h:mm:ss a", "h:mm a"], $b:6, Ec:[5, 6], ac:5};
 function Ci(a, b, c, d, f, g) {
@@ -5426,12 +5426,12 @@ function Ui(a) {
 }
 function Vi() {
 }
-Vi.prototype = ti.prototype;
-Ui.Oc = ti.prototype;
+Vi.prototype = Bi.prototype;
+Ui.Oc = Bi.prototype;
 Ui.prototype = new Vi;
 Ui.prototype.constructor = Ui;
 Ui.prototype.next = function() {
-  Number(this.tb.Va()) > this.rb && e(si);
+  Number(this.tb.Va()) > this.rb && e(Ai);
   var a = this.tb.pb();
   this.tb.add(new Ci(Fi, 1));
   return a
@@ -5695,23 +5695,23 @@ function Zi() {
 "08/31", "\ufdd0:time", Y(["13:30", "16:00"])]), u(["\ufdd0:name", "Frisbee", "\ufdd0:location", "A field on campus", "\ufdd0:description", "Meet us at pika at 4:00pm or find us at a field on campus (call 719-330-1188 for location). Then come back to pika for dinner.", "\ufdd0:date", "08/31", "\ufdd0:time", Y(["16:30", "18:00"])]), u(["\ufdd0:name", "Indian Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Sumptuous subcontinental spices.", "\ufdd0:date", "08/31", "\ufdd0:time", 
 Y(["19:00", "20:00"])]), u(["\ufdd0:name", "Cafe pika", "\ufdd0:location", "pika dining room", "\ufdd0:description", "After dinner, pika will be transformed into a bohemian cafe experience.", "\ufdd0:date", "08/31", "\ufdd0:time", Y(["20:00", "23:59"])]), u(["\ufdd0:name", "Brewing up a Storm", "\ufdd0:location", "pika dining room", "\ufdd0:description", "How many ways can you make a cup of coffee? Experiment with different coffee and espresso methods such as pour-over, aeropress, and moka pot.", 
 "\ufdd0:date", "08/31", "\ufdd0:time", Y(["20:00", "23:59"])]), u(["\ufdd0:name", "Baking", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Yeast, yeast, yeast!", "\ufdd0:date", "08/31", "\ufdd0:time", Y(["20:00", "23:59"])]), u(["\ufdd0:name", "Tea Blending", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Earl Grey. Jasmine Green. Oolong. Yerba Mate. Moroccan Mint. What makes a tea blend unique? Remake an old favorite or create your own signature blend with us, then relax and enjoy fine conversation as you sip away at your concoction.", 
-"\ufdd0:date", "08/31", "\ufdd0:time", Y(["20:00", "23:59"])]), u(["\ufdd0:name", "Literary Mixtape", "\ufdd0:location", "pika dining room", "\ufdd0:description", "\"If it's true that as I'm talking to you bones are moving in your inner ears, I'm physically touching you with my voice.\" (Etheridge Knight)", "\ufdd0:date", "08/31", "\ufdd0:time", Y(["21:30", "23:00"])]), u(["\ufdd0:name", "Open Mic and Singalong", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Join our choir of heavenly hippies. Read to us, sing to us, tell us jokes! C'mon, we know you're talented.", 
-"\ufdd0:date", "08/31", "\ufdd0:time", Y(["23:00", "23:59"])]), u(["\ufdd0:name", "Solar Telescope", "\ufdd0:location", "pika roofdeck", "\ufdd0:description", "You can see sunspots!", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["14:30", "16:30"])]), u(["\ufdd0:name", "Pirate War with tEp", "\ufdd0:location", "Sailing Pavilion", "\ufdd0:description", "An epic pirate waarr has arraged on forr yeaarrs and yeaarrs between pika and tEp - be tharr on the Chaarrles and help us defend MIT's lands against the perpetratarrs from the Boston side! Meet us at pika at 4:00pm or at the MIT sailing pavillion at 4:30pm. ARRGH!!!!!!", 
-"\ufdd0:date", "09/01", "\ufdd0:time", Y(["16:30", "17:30"])]), u(["\ufdd0:name", "Sushi Making", "\ufdd0:location", "pika kitchen", "\ufdd0:description", "Sea-treats sheathed in rice. / Rice wrapped in gleaming green grace. / Roll sushi with us.", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["17:30", "19:00"])]), u(["\ufdd0:name", "Sushi Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Taste the fruits of your labor (or somebody else's). There will be a variety of sushi, some perhaps substantially more exotic than others.", 
-"\ufdd0:date", "09/01", "\ufdd0:time", Y(["19:00", "20:00"])]), u(["\ufdd0:name", "Spinning Staff / Poi Making", "\ufdd0:location", "pika", "\ufdd0:description", "You've seen East Campus do it, now make one of your own under the sage guidance of our resident experts.", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["20:00", "21:00"])]), u(["\ufdd0:name", "Spoon Carving", "\ufdd0:location", "pika", "\ufdd0:description", "It is an art and a science.", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["21:00", "22:00"])]), 
-u(["\ufdd0:name", "Roofdeck Anime", "\ufdd0:location", "pika roofdeck", "\ufdd0:description", "Relax on the roofdeck, watch some anime, and count the few stars whose radiation makes it through the Boston light pollution.", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["23:00", "23:59"])]), u(["\ufdd0:name", "Morning D\u00e9rive", "\ufdd0:location", "pika and the streets", "\ufdd0:description", "Wander the streets in a peculiarly philosophical French manner.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["9:30", 
-"11:00"])]), u(["\ufdd0:name", "Mural Painting", "\ufdd0:location", "pika backyard", "\ufdd0:description", "It's not vandalism if we say it isn't.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["13:00", "15:00"])]), u(["\ufdd0:name", "Tie Dyeing", "\ufdd0:location", "pika backyard", "\ufdd0:description", "Dye your tie! Or, like, your shirt, or something. That works too.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["13:30", "15:00"])]), u(["\ufdd0:name", "Henna and Hair Dyeing", "\ufdd0:location", "pika", 
-"\ufdd0:description", "Dye yourself! Make your hair any color of the rainbow--or all of them.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["14:00", "16:00"])]), u(["\ufdd0:name", "pika Hackathon", "\ufdd0:location", "pika", "\ufdd0:description", "Electric Scooters. Wooden Spoons. NERF turrets. Linux Hackery. Robot Arms. Quadcopters. Come see what pikans have been up to, and learn a thing or two on your own! There will be plenty to do and eat all night!", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["18:00", 
-"23:59"])]), u(["\ufdd0:name", "Zombie Bicycles!!", "\ufdd0:location", "pika basement toolshop", "\ufdd0:description", "What can you accomplish with tools and parts?", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["18:00", "19:00"])]), u(["\ufdd0:name", "Linux Until We Die", "\ufdd0:location", "pika", "\ufdd0:description", "Come set up a fileserver with your friendly* neighborhood pikan Linux Haxx0rs. *Only when caffeinated.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["19:00", "20:00"])]), u(["\ufdd0:name", 
-"Tech Showcase", "\ufdd0:location", "pika", "\ufdd0:description", "Electric Scooters. Wooden Spoons. NERF turrets. Linux Hackery. Robot Arms. Quadcopters. Come see what pikans have been up to, and learn a thing or two on your own!", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["20:00", "21:00"])]), u(["\ufdd0:name", "Python-Arduino Interfacing", "\ufdd0:location", "pika", "\ufdd0:description", "Learn how to automate anything!!", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["21:00", "22:00"])]), u(["\ufdd0:name", 
-"MeeMoo", "\ufdd0:location", "pika", "\ufdd0:description", "Did somebody say... Meemoo?", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["22:00", "23:00"])]), u(["\ufdd0:name", "MaKey MaKey", "\ufdd0:location", "pika", "\ufdd0:description", "Make bizarre and inventive interfaces!", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["22:00", "23:00"])]), u(["\ufdd0:name", "Iron Chef pika", "\ufdd0:location", "pika kitchen", "\ufdd0:description", "Garlic. Butter. Cumin. Kale?!? Split into teams, run to the grocery store (budget is on us!) and cook your team to VICTORY! (and prizes, of course)", 
-"\ufdd0:date", "09/03", "\ufdd0:time", Y(["14:00", "16:00"])]), u(["\ufdd0:name", "Dinosaur Eggs!", "\ufdd0:location", "pika", "\ufdd0:description", "...", "\ufdd0:date", "09/03", "\ufdd0:time", Y(["14:00", "15:00"])]), u(["\ufdd0:name", "Shoeblade: The Noble Sport", "\ufdd0:location", "the murf (pika)", "\ufdd0:description", "Celebrate pikan heritage in a tournament like no other: Shoeblade and Forkapple. Match yourself against our top athletes before they head to the 2014 Olympics!", "\ufdd0:date", 
-"09/03", "\ufdd0:time", Y(["17:00", "19:00"])]), u(["\ufdd0:name", "Contact on the Roof", "\ufdd0:location", "pika roofdeck", "\ufdd0:description", "If you like words, games, or the roof, you are certain to be satisfied by the awesome experience you will have on September 3rd around 6:00pm.", "\ufdd0:date", "09/03", "\ufdd0:time", Y(["18:00", "19:00"])]), u(["\ufdd0:name", "Polish dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "The best Polish food we have ever served!", "\ufdd0:date", 
-"09/03", "\ufdd0:time", Y(["19:00", "20:00"])]), u(["\ufdd0:name", "Learn the Spinning Arts", "\ufdd0:location", "pika backyard", "\ufdd0:description", "Learn the ancient art of staff/poi spinning from our resident experts. Learn to use what you made on Sunday, or borrow gear from us.", "\ufdd0:date", "09/03", "\ufdd0:time", Y(["21:00", "22:00"])]), u(["\ufdd0:name", "Orange Foods Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Taste (the best part of) the rainbow.", "\ufdd0:date", 
-"09/04", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Italian Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Tomato & basil & garlic & parm, just like Nonna makes it.", "\ufdd0:date", "09/05", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Homemade Pizza Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Homemade Pizza Dinner", "\ufdd0:date", "09/06", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Avenue Q", "\ufdd0:location", 
-"Kresge auditorium", "\ufdd0:description", "The Musical Theater Guild will impart valuable life lessons, like what the Internet's for (spoiler: it's for porn). Walk from pika at 7:15pm or meet us at Kresge at 7:45pm.", "\ufdd0:date", "09/06", "\ufdd0:time", Y(["19:30", "21:30"])]), u(["\ufdd0:name", "pika on WMBR", "\ufdd0:location", "Walker Memorial", "\ufdd0:description", "Ever wanted to be on the radio? Meet at pika at 11:00 or find us outside Walker at 11:45pm.", "\ufdd0:date", "09/06", "\ufdd0:time", 
-Y(["23:00", "23:59"])]), u(["\ufdd0:name", "Rock Climbing", "\ufdd0:location", "Walker Memorial", "\ufdd0:description", "Climb on MIT's wall with pikans. Meet at pika at 4:00pm or in front of Walker Memorial at 4:30pm.", "\ufdd0:date", "09/07", "\ufdd0:time", Y(["16:30", "18:30"])]), u(["\ufdd0:name", "pika Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Find out why pika is most famous for its awesome meal plan. Come meet pikans over a delicious, home-cooked meal.", "\ufdd0:date", 
-"09/07", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Playground Saga (With Froyo)", "\ufdd0:location", "BerryLine, Cambridge", "\ufdd0:description", "Embark on a treacherous quest to the best frozen yogurt place in the world and test yourself against Cambridge's most geometrically implausible playground.", "\ufdd0:date", "09/07", "\ufdd0:time", Y(["23:00", "23:59"])])]);
+"\ufdd0:date", "08/31", "\ufdd0:time", Y(["20:00", "23:59"])]), u(["\ufdd0:name", "Literary Mixtape", "\ufdd0:location", "pika dining room", "\ufdd0:description", "\"If it's true that as I'm talking to you bones are moving in your inner ears, I'm physically touching you with my voice.\" (Etheridge Knight)  Bring your favorite poems or excerpts from books to read aloud and share!", "\ufdd0:date", "08/31", "\ufdd0:time", Y(["21:30", "23:00"])]), u(["\ufdd0:name", "Open Mic and Singalong", "\ufdd0:location", 
+"pika dining room", "\ufdd0:description", "Join our choir of heavenly hippies. Read to us, sing to us, tell us jokes! C'mon, we know you're talented.", "\ufdd0:date", "08/31", "\ufdd0:time", Y(["23:00", "23:59"])]), u(["\ufdd0:name", "Solar Telescope", "\ufdd0:location", "pika roofdeck", "\ufdd0:description", "You can see sunspots!", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["14:30", "16:30"])]), u(["\ufdd0:name", "Pirate War with tEp", "\ufdd0:location", "Sailing Pavilion", "\ufdd0:description", 
+"An epic pirate waarr has arraged on forr yeaarrs and yeaarrs between pika and tEp - be tharr on the Chaarrles and help us defend MIT's lands against the perpetratarrs from the Boston side! Meet us at pika at 4:00pm or at the MIT sailing pavillion at 4:30pm. ARRGH!!!!!!", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["16:30", "17:30"])]), u(["\ufdd0:name", "Sushi Making", "\ufdd0:location", "pika kitchen", "\ufdd0:description", "Sea-treats sheathed in rice. / Rice wrapped in gleaming green grace. / Roll sushi with us.", 
+"\ufdd0:date", "09/01", "\ufdd0:time", Y(["17:30", "19:00"])]), u(["\ufdd0:name", "Sushi Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Taste the fruits of your labor (or somebody else's). There will be a variety of sushi, some perhaps substantially more exotic than others.", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["19:00", "20:00"])]), u(["\ufdd0:name", "Spinning Staff / Poi Making", "\ufdd0:location", "pika", "\ufdd0:description", "You've seen East Campus do it, now make one of your own under the sage guidance of our resident experts.", 
+"\ufdd0:date", "09/01", "\ufdd0:time", Y(["20:00", "21:00"])]), u(["\ufdd0:name", "Spoon Carving", "\ufdd0:location", "pika", "\ufdd0:description", "It is an art and a science.", "\ufdd0:date", "09/01", "\ufdd0:time", Y(["21:00", "22:00"])]), u(["\ufdd0:name", "Roofdeck Anime", "\ufdd0:location", "pika roofdeck", "\ufdd0:description", "Relax on the roofdeck, watch some anime, and count the few stars whose radiation makes it through the Boston light pollution.", "\ufdd0:date", "09/01", "\ufdd0:time", 
+Y(["23:00", "23:59"])]), u(["\ufdd0:name", "Morning D\u00e9rive", "\ufdd0:location", "pika and the streets", "\ufdd0:description", "Wander the streets in a peculiarly philosophical French manner.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["9:30", "11:00"])]), u(["\ufdd0:name", "Mural Painting", "\ufdd0:location", "pika backyard", "\ufdd0:description", "It's not vandalism if we say it isn't.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["13:00", "15:00"])]), u(["\ufdd0:name", "Tie Dyeing", "\ufdd0:location", 
+"pika backyard", "\ufdd0:description", "Dye your tie! Or, like, your shirt, or something. That works too.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["13:30", "15:00"])]), u(["\ufdd0:name", "Henna and Hair Dyeing", "\ufdd0:location", "pika", "\ufdd0:description", "Dye yourself! Make your hair any color of the rainbow--or all of them.", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["14:00", "16:00"])]), u(["\ufdd0:name", "pika Hackathon", "\ufdd0:location", "pika", "\ufdd0:description", "Electric Scooters. Wooden Spoons. NERF turrets. Linux Hackery. Robot Arms. Quadcopters. Come see what pikans have been up to, and learn a thing or two on your own! There will be plenty to do and eat all night!", 
+"\ufdd0:date", "09/02", "\ufdd0:time", Y(["18:00", "23:59"])]), u(["\ufdd0:name", "Zombie Bicycles!!", "\ufdd0:location", "pika basement toolshop", "\ufdd0:description", "What can you accomplish with tools and parts?", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["18:00", "19:00"])]), u(["\ufdd0:name", "Linux Until We Die", "\ufdd0:location", "pika", "\ufdd0:description", "Come set up a fileserver with your friendly* neighborhood pikan Linux Haxx0rs. *Only when caffeinated.", "\ufdd0:date", "09/02", 
+"\ufdd0:time", Y(["19:00", "20:00"])]), u(["\ufdd0:name", "Tech Showcase", "\ufdd0:location", "pika", "\ufdd0:description", "Electric Scooters. Wooden Spoons. NERF turrets. Linux Hackery. Robot Arms. Quadcopters. Come see what pikans have been up to, and learn a thing or two on your own!", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["20:00", "21:00"])]), u(["\ufdd0:name", "Python-Arduino Interfacing", "\ufdd0:location", "pika", "\ufdd0:description", "Learn how to automate anything!!", "\ufdd0:date", 
+"09/02", "\ufdd0:time", Y(["21:00", "22:00"])]), u(["\ufdd0:name", "MeeMoo", "\ufdd0:location", "pika", "\ufdd0:description", "Did somebody say... Meemoo?", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["22:00", "23:00"])]), u(["\ufdd0:name", "MaKey MaKey", "\ufdd0:location", "pika", "\ufdd0:description", "Make bizarre and inventive interfaces!", "\ufdd0:date", "09/02", "\ufdd0:time", Y(["22:00", "23:00"])]), u(["\ufdd0:name", "Iron Chef pika", "\ufdd0:location", "pika kitchen", "\ufdd0:description", 
+"Garlic. Butter. Cumin. Kale?!? Split into teams, run to the grocery store (budget is on us!) and cook your team to VICTORY! (and prizes, of course)", "\ufdd0:date", "09/03", "\ufdd0:time", Y(["14:00", "16:00"])]), u(["\ufdd0:name", "Dinosaur Eggs!", "\ufdd0:location", "pika", "\ufdd0:description", "...", "\ufdd0:date", "09/03", "\ufdd0:time", Y(["14:00", "15:00"])]), u(["\ufdd0:name", "Shoeblade: The Noble Sport", "\ufdd0:location", "the murf (pika)", "\ufdd0:description", "Celebrate pikan heritage in a tournament like no other: Shoeblade and Forkapple. Match yourself against our top athletes before they head to the 2014 Olympics!", 
+"\ufdd0:date", "09/03", "\ufdd0:time", Y(["17:00", "19:00"])]), u(["\ufdd0:name", "Contact on the Roof", "\ufdd0:location", "pika roofdeck", "\ufdd0:description", "If you like words, games, or the roof, you are certain to be satisfied by the awesome experience you will have on September 3rd around 6:00pm.", "\ufdd0:date", "09/03", "\ufdd0:time", Y(["18:00", "19:00"])]), u(["\ufdd0:name", "Polish dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "The best Polish food we have ever served!", 
+"\ufdd0:date", "09/03", "\ufdd0:time", Y(["19:00", "20:00"])]), u(["\ufdd0:name", "Learn the Spinning Arts", "\ufdd0:location", "pika backyard", "\ufdd0:description", "Learn the ancient art of staff/poi spinning from our resident experts. Learn to use what you made on Sunday, or borrow gear from us.", "\ufdd0:date", "09/03", "\ufdd0:time", Y(["21:00", "22:00"])]), u(["\ufdd0:name", "Orange Foods Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Taste (the best part of) the rainbow.", 
+"\ufdd0:date", "09/04", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Italian Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Tomato & basil & garlic & parm, just like Nonna makes it.", "\ufdd0:date", "09/05", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Homemade Pizza Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Homemade Pizza Dinner", "\ufdd0:date", "09/06", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Avenue Q", 
+"\ufdd0:location", "Kresge auditorium", "\ufdd0:description", "The Musical Theater Guild will impart valuable life lessons, like what the Internet's for (spoiler: it's for porn). Walk from pika at 7:15pm or meet us at Kresge at 7:45pm.", "\ufdd0:date", "09/06", "\ufdd0:time", Y(["19:30", "21:30"])]), u(["\ufdd0:name", "pika on WMBR", "\ufdd0:location", "Walker Memorial", "\ufdd0:description", "Ever wanted to be on the radio? Meet at pika at 11:00 or find us outside Walker at 11:45pm.", "\ufdd0:date", 
+"09/06", "\ufdd0:time", Y(["23:00", "23:59"])]), u(["\ufdd0:name", "Rock Climbing", "\ufdd0:location", "Walker Memorial", "\ufdd0:description", "Climb on MIT's wall with pikans. Meet at pika at 4:00pm or in front of Walker Memorial at 4:30pm.", "\ufdd0:date", "09/07", "\ufdd0:time", Y(["16:30", "18:30"])]), u(["\ufdd0:name", "pika Dinner", "\ufdd0:location", "pika dining room", "\ufdd0:description", "Find out why pika is most famous for its awesome meal plan. Come meet pikans over a delicious, home-cooked meal.", 
+"\ufdd0:date", "09/07", "\ufdd0:time", Y(["19:00", "20:30"])]), u(["\ufdd0:name", "Playground Saga (With Froyo)", "\ufdd0:location", "BerryLine, Cambridge", "\ufdd0:description", "Embark on a treacherous quest to the best frozen yogurt place in the world and test yourself against Cambridge's most geometrically implausible playground.", "\ufdd0:date", "09/07", "\ufdd0:time", Y(["23:00", "23:59"])])]);
 var ej = {};
 function fj(a) {
   if(a ? a.ua : a) {
