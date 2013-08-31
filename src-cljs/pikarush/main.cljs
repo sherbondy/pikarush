@@ -57,14 +57,15 @@
             (.format nav-formatter day)]])]
     (for [day rush-date-vec]
       (let [mmdd       (.format mmdd-formatter day)
-            day-events (get events-by-date mmdd)]
+            day-events (get events-by-date mmdd)
+            day-id     (.format id-formatter day)]
         [:div
-          [:h3 {:id (.format id-formatter day)}
+          [:h3 {:id day-id}
            (.format heading-formatter day)]
 
           (for [i (range (count day-events))]
             (let [event (nth day-events i)
-                  event-id (str "event" i)
+                  event-id (str day-id "-event" i)
                   [start-dt end-dt] (map (partial parse-dt mmdd)
                                          (:time event))]
               [:div.event {:id (str "#" event-id)}

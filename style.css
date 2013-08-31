@@ -34,10 +34,10 @@ h4 {
 }
 
 .splash h1 {
-  line-height: 2;
+  line-height: 1;
   color: #fff;
   text-shadow: 0px 1px 0px #000;
-  font-size: 72px;
+  font-size: 96px;
 }
 
 #menu {
@@ -104,6 +104,10 @@ footer a {
   line-height: 2;
 }
 
+.event a {
+  overflow: hidden;
+}
+
 .event .description {
   display: none;
   background: #fff;
@@ -121,7 +125,7 @@ footer a {
   background: #0078e7;
   padding: 8px 16px;
   margin: 0px;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
   color: #fff;
 }
 
