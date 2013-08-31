@@ -134,6 +134,10 @@ footer a {
   color: #fff;
 }
 
+.event a:hover {
+  opacity: 0.8;
+}
+
 .event.now h4 {
   background: #111;
 }
