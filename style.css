@@ -18,6 +18,16 @@ h1, h2, h3, h4 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+
 .splash {
   background: #0078e7;
   text-align: center;
@@ -76,4 +86,53 @@ footer {
 
 footer a {
   color: #fff;
+}
+
+#dates {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#dates li a {
+  width: 86px;
+  padding: 16px 0px;
+}
+
+#event-list h3 {
+  margin: 8px 24px;
+  text-align: right;
+  line-height: 2;
+}
+
+.event .description {
+  display: none;
+  background: #fff;
+  padding: 16px;
+}
+.event.active .description {
+  display: block;
+}
+
+.event {
+  margin: 0;
+}
+
+.event h4 {
+  background: #0078e7;
+  padding: 8px 16px;
+  margin: 0px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.event .time {
+  display: block;
+  float: right;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 16px;
+  margin-right: 8px;
+  font-weight: normal;
+  color: #000;
 }
