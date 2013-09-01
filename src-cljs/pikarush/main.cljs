@@ -48,7 +48,7 @@
           (vecify (.iterator rush-dates))))
 
 (def mmdd-formatter (goog.i18n.DateTimeFormat. "MM/dd"))
-(def heading-formatter (goog.i18n.DateTimeFormat. "MMMM d"))
+(def heading-formatter (goog.i18n.DateTimeFormat. "EEEE, MMMM d"))
 (def nav-formatter (goog.i18n.DateTimeFormat. "MMM d"))
 (def id-formatter (goog.i18n.DateTimeFormat. "MMMd"))
 (def time-formatter (goog.i18n.DateTimeFormat. "hh:mma"))

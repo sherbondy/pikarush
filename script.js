@@ -6064,7 +6064,7 @@ function Rj(a, b) {
   var c = 0 >= Li(a, Ua(Pj));
   return c ? 0 <= Li(b, Ua(Pj)) : c
 }
-var Sj = new Pi("MM/dd"), Tj = new Pi("MMMM d"), Uj = new Pi("MMM d"), Vj = new Pi("MMMd"), Wj = new Pi("hh:mma"), Xj = new Wi("MM/dd hh:mm"), Yj;
+var Sj = new Pi("MM/dd"), Tj = new Pi("EEEE, MMMM d"), Uj = new Pi("MMM d"), Vj = new Pi("MMMd"), Wj = new Pi("hh:mma"), Xj = new Wi("MM/dd hh:mm"), Yj;
 Yj = Rc.b(function(a, b) {
   var c = "\ufdd0:date".c ? "\ufdd0:date".c(b) : "\ufdd0:date".call(m, b);
   return lc.b(a, c, Xb.a(T.b(a, c, vf), b))

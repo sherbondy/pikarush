@@ -32951,18 +32951,18 @@ pikarush.main.vecify = function() {
     while(true) {
       try {
         var next = iterator.next();
-        var G__96105 = iterator;
-        var G__96106 = cljs.core.conj.call(null, s, next);
-        iterator = G__96105;
-        s = G__96106;
+        var G__8371 = iterator;
+        var G__8372 = cljs.core.conj.call(null, s, next);
+        iterator = G__8371;
+        s = G__8372;
         continue
-      }catch(e96104) {
-        if(e96104 instanceof Object) {
-          var e = e96104;
+      }catch(e8370) {
+        if(e8370 instanceof Object) {
+          var e = e8370;
           return s
         }else {
           if("\ufdd0:else") {
-            throw e96104;
+            throw e8370;
           }else {
             return null
           }
@@ -33005,12 +33005,12 @@ pikarush.main.happening_now_QMARK_ = function happening_now_QMARK_(start_time, e
   }
 };
 pikarush.main.remaining_rush_days = function remaining_rush_days() {
-  return cljs.core.filter.call(null, function(p1__96107_SHARP_) {
-    return cljs.core.not.call(null, pikarush.main.before_today_QMARK_.call(null, p1__96107_SHARP_))
+  return cljs.core.filter.call(null, function(p1__8373_SHARP_) {
+    return cljs.core.not.call(null, pikarush.main.before_today_QMARK_.call(null, p1__8373_SHARP_))
   }, pikarush.main.vecify.call(null, pikarush.main.rush_dates.iterator()))
 };
 pikarush.main.mmdd_formatter = new goog.i18n.DateTimeFormat("MM/dd");
-pikarush.main.heading_formatter = new goog.i18n.DateTimeFormat("MMMM d");
+pikarush.main.heading_formatter = new goog.i18n.DateTimeFormat("EEEE, MMMM d");
 pikarush.main.nav_formatter = new goog.i18n.DateTimeFormat("MMM d");
 pikarush.main.id_formatter = new goog.i18n.DateTimeFormat("MMMd");
 pikarush.main.time_formatter = new goog.i18n.DateTimeFormat("hh:mma");
@@ -33026,25 +33026,25 @@ pikarush.main.event_list = function event_list() {
   return dommy.template.__GT_node_like.call(null, function() {
     var rush_days = pikarush.main.remaining_rush_days.call(null);
     return cljs.core.PersistentVector.fromArray(["\ufdd0:div", cljs.core.empty_QMARK_.call(null, rush_days) ? cljs.core.PersistentVector.fromArray(["\ufdd0:h3", "Rush is over. Hope you had a blast! ", "Feel free to stop by pika, regardless."], true) : cljs.core.PersistentVector.fromArray(["\ufdd0:ul#dates.pure-paginator", function() {
-      var iter__3042__auto__ = function iter__96148(s__96149) {
+      var iter__3042__auto__ = function iter__8414(s__8415) {
         return new cljs.core.LazySeq(null, false, function() {
-          var s__96149__$1 = s__96149;
+          var s__8415__$1 = s__8415;
           while(true) {
-            var temp__4092__auto__ = cljs.core.seq.call(null, s__96149__$1);
+            var temp__4092__auto__ = cljs.core.seq.call(null, s__8415__$1);
             if(temp__4092__auto__) {
-              var s__96149__$2 = temp__4092__auto__;
-              if(cljs.core.chunked_seq_QMARK_.call(null, s__96149__$2)) {
-                var c__3040__auto__ = cljs.core.chunk_first.call(null, s__96149__$2);
+              var s__8415__$2 = temp__4092__auto__;
+              if(cljs.core.chunked_seq_QMARK_.call(null, s__8415__$2)) {
+                var c__3040__auto__ = cljs.core.chunk_first.call(null, s__8415__$2);
                 var size__3041__auto__ = cljs.core.count.call(null, c__3040__auto__);
-                var b__96151 = cljs.core.chunk_buffer.call(null, size__3041__auto__);
+                var b__8417 = cljs.core.chunk_buffer.call(null, size__3041__auto__);
                 if(function() {
-                  var i__96150 = 0;
+                  var i__8416 = 0;
                   while(true) {
-                    if(i__96150 < size__3041__auto__) {
-                      var day = cljs.core._nth.call(null, c__3040__auto__, i__96150);
-                      cljs.core.chunk_append.call(null, b__96151, cljs.core.PersistentVector.fromArray(["\ufdd0:li", cljs.core.PersistentVector.fromArray(["\ufdd0:a.pure-button", cljs.core.PersistentArrayMap.fromArray(["\ufdd0:href", [cljs.core.str("#"), cljs.core.str(pikarush.main.id_formatter.format(day))].join("")], true), pikarush.main.nav_formatter.format(day)], true)], true));
-                      var G__96188 = i__96150 + 1;
-                      i__96150 = G__96188;
+                    if(i__8416 < size__3041__auto__) {
+                      var day = cljs.core._nth.call(null, c__3040__auto__, i__8416);
+                      cljs.core.chunk_append.call(null, b__8417, cljs.core.PersistentVector.fromArray(["\ufdd0:li", cljs.core.PersistentVector.fromArray(["\ufdd0:a.pure-button", cljs.core.PersistentArrayMap.fromArray(["\ufdd0:href", [cljs.core.str("#"), cljs.core.str(pikarush.main.id_formatter.format(day))].join("")], true), pikarush.main.nav_formatter.format(day)], true)], true));
+                      var G__8454 = i__8416 + 1;
+                      i__8416 = G__8454;
                       continue
                     }else {
                       return true
@@ -33052,13 +33052,13 @@ pikarush.main.event_list = function event_list() {
                     break
                   }
                 }()) {
-                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96151), iter__96148.call(null, cljs.core.chunk_rest.call(null, s__96149__$2)))
+                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8417), iter__8414.call(null, cljs.core.chunk_rest.call(null, s__8415__$2)))
                 }else {
-                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96151), null)
+                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8417), null)
                 }
               }else {
-                var day = cljs.core.first.call(null, s__96149__$2);
-                return cljs.core.cons.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0:li", cljs.core.PersistentVector.fromArray(["\ufdd0:a.pure-button", cljs.core.PersistentArrayMap.fromArray(["\ufdd0:href", [cljs.core.str("#"), cljs.core.str(pikarush.main.id_formatter.format(day))].join("")], true), pikarush.main.nav_formatter.format(day)], true)], true), iter__96148.call(null, cljs.core.rest.call(null, s__96149__$2)))
+                var day = cljs.core.first.call(null, s__8415__$2);
+                return cljs.core.cons.call(null, cljs.core.PersistentVector.fromArray(["\ufdd0:li", cljs.core.PersistentVector.fromArray(["\ufdd0:a.pure-button", cljs.core.PersistentArrayMap.fromArray(["\ufdd0:href", [cljs.core.str("#"), cljs.core.str(pikarush.main.id_formatter.format(day))].join("")], true), pikarush.main.nav_formatter.format(day)], true)], true), iter__8414.call(null, cljs.core.rest.call(null, s__8415__$2)))
               }
             }else {
               return null
@@ -33069,51 +33069,51 @@ pikarush.main.event_list = function event_list() {
       };
       return iter__3042__auto__.call(null, rush_days)
     }()], true), function() {
-      var iter__3042__auto__ = function iter__96152(s__96153) {
+      var iter__3042__auto__ = function iter__8418(s__8419) {
         return new cljs.core.LazySeq(null, false, function() {
-          var s__96153__$1 = s__96153;
+          var s__8419__$1 = s__8419;
           while(true) {
-            var temp__4092__auto__ = cljs.core.seq.call(null, s__96153__$1);
+            var temp__4092__auto__ = cljs.core.seq.call(null, s__8419__$1);
             if(temp__4092__auto__) {
-              var s__96153__$2 = temp__4092__auto__;
-              if(cljs.core.chunked_seq_QMARK_.call(null, s__96153__$2)) {
-                var c__3040__auto__ = cljs.core.chunk_first.call(null, s__96153__$2);
+              var s__8419__$2 = temp__4092__auto__;
+              if(cljs.core.chunked_seq_QMARK_.call(null, s__8419__$2)) {
+                var c__3040__auto__ = cljs.core.chunk_first.call(null, s__8419__$2);
                 var size__3041__auto__ = cljs.core.count.call(null, c__3040__auto__);
-                var b__96155 = cljs.core.chunk_buffer.call(null, size__3041__auto__);
+                var b__8421 = cljs.core.chunk_buffer.call(null, size__3041__auto__);
                 if(function() {
-                  var i__96154 = 0;
+                  var i__8420 = 0;
                   while(true) {
-                    if(i__96154 < size__3041__auto__) {
-                      var day = cljs.core._nth.call(null, c__3040__auto__, i__96154);
-                      cljs.core.chunk_append.call(null, b__96155, function() {
+                    if(i__8420 < size__3041__auto__) {
+                      var day = cljs.core._nth.call(null, c__3040__auto__, i__8420);
+                      cljs.core.chunk_append.call(null, b__8421, function() {
                         var mmdd = pikarush.main.mmdd_formatter.format(day);
                         var day_events = cljs.core.get.call(null, pikarush.main.events_by_date, mmdd);
                         var day_id = pikarush.main.id_formatter.format(day);
                         return cljs.core.PersistentVector.fromArray(["\ufdd0:div", cljs.core.PersistentVector.fromArray(["\ufdd0:h3", cljs.core.PersistentArrayMap.fromArray(["\ufdd0:id", day_id], true), pikarush.main.heading_formatter.format(day)], true), function() {
-                          var iter__3042__auto__ = function(i__96154, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__96155, s__96153__$2, temp__4092__auto__) {
-                            return function iter__96172(s__96173) {
-                              return new cljs.core.LazySeq(null, false, function(i__96154, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__96155, s__96153__$2, temp__4092__auto__) {
+                          var iter__3042__auto__ = function(i__8420, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__8421, s__8419__$2, temp__4092__auto__) {
+                            return function iter__8438(s__8439) {
+                              return new cljs.core.LazySeq(null, false, function(i__8420, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__8421, s__8419__$2, temp__4092__auto__) {
                                 return function() {
-                                  var s__96173__$1 = s__96173;
+                                  var s__8439__$1 = s__8439;
                                   while(true) {
-                                    var temp__4092__auto____$1 = cljs.core.seq.call(null, s__96173__$1);
+                                    var temp__4092__auto____$1 = cljs.core.seq.call(null, s__8439__$1);
                                     if(temp__4092__auto____$1) {
-                                      var s__96173__$2 = temp__4092__auto____$1;
-                                      if(cljs.core.chunked_seq_QMARK_.call(null, s__96173__$2)) {
-                                        var c__3040__auto____$1 = cljs.core.chunk_first.call(null, s__96173__$2);
+                                      var s__8439__$2 = temp__4092__auto____$1;
+                                      if(cljs.core.chunked_seq_QMARK_.call(null, s__8439__$2)) {
+                                        var c__3040__auto____$1 = cljs.core.chunk_first.call(null, s__8439__$2);
                                         var size__3041__auto____$1 = cljs.core.count.call(null, c__3040__auto____$1);
-                                        var b__96175 = cljs.core.chunk_buffer.call(null, size__3041__auto____$1);
+                                        var b__8441 = cljs.core.chunk_buffer.call(null, size__3041__auto____$1);
                                         if(function() {
-                                          var i__96174 = 0;
+                                          var i__8440 = 0;
                                           while(true) {
-                                            if(i__96174 < size__3041__auto____$1) {
-                                              var i = cljs.core._nth.call(null, c__3040__auto____$1, i__96174);
-                                              cljs.core.chunk_append.call(null, b__96175, function() {
+                                            if(i__8440 < size__3041__auto____$1) {
+                                              var i = cljs.core._nth.call(null, c__3040__auto____$1, i__8440);
+                                              cljs.core.chunk_append.call(null, b__8441, function() {
                                                 var event = cljs.core.nth.call(null, day_events, i);
                                                 var event_id = [cljs.core.str(day_id), cljs.core.str("-event"), cljs.core.str(i)].join("");
-                                                var vec__96178 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
-                                                var start_dt = cljs.core.nth.call(null, vec__96178, 0, null);
-                                                var end_dt = cljs.core.nth.call(null, vec__96178, 1, null);
+                                                var vec__8444 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
+                                                var start_dt = cljs.core.nth.call(null, vec__8444, 0, null);
+                                                var end_dt = cljs.core.nth.call(null, vec__8444, 1, null);
                                                 var event_now_QMARK_ = pikarush.main.happening_now_QMARK_.call(null, start_dt, end_dt);
                                                 if(cljs.core.truth_(pikarush.main.before_now_QMARK_.call(null, end_dt))) {
                                                   return null
@@ -33123,8 +33123,8 @@ pikarush.main.event_list = function event_list() {
                                                   (new cljs.core.Keyword("\ufdd0:description")).call(null, event)], true), cljs.core.PersistentVector.fromArray(["\ufdd0:span.location", cljs.core.PersistentVector.fromArray(["\ufdd0:strong", "Location: "], true), (new cljs.core.Keyword("\ufdd0:location")).call(null, event)], true)], true)], true)
                                                 }
                                               }());
-                                              var G__96189 = i__96174 + 1;
-                                              i__96174 = G__96189;
+                                              var G__8455 = i__8440 + 1;
+                                              i__8440 = G__8455;
                                               continue
                                             }else {
                                               return true
@@ -33132,18 +33132,18 @@ pikarush.main.event_list = function event_list() {
                                             break
                                           }
                                         }()) {
-                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96175), iter__96172.call(null, cljs.core.chunk_rest.call(null, s__96173__$2)))
+                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8441), iter__8438.call(null, cljs.core.chunk_rest.call(null, s__8439__$2)))
                                         }else {
-                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96175), null)
+                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8441), null)
                                         }
                                       }else {
-                                        var i = cljs.core.first.call(null, s__96173__$2);
+                                        var i = cljs.core.first.call(null, s__8439__$2);
                                         return cljs.core.cons.call(null, function() {
                                           var event = cljs.core.nth.call(null, day_events, i);
                                           var event_id = [cljs.core.str(day_id), cljs.core.str("-event"), cljs.core.str(i)].join("");
-                                          var vec__96179 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
-                                          var start_dt = cljs.core.nth.call(null, vec__96179, 0, null);
-                                          var end_dt = cljs.core.nth.call(null, vec__96179, 1, null);
+                                          var vec__8445 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
+                                          var start_dt = cljs.core.nth.call(null, vec__8445, 0, null);
+                                          var end_dt = cljs.core.nth.call(null, vec__8445, 1, null);
                                           var event_now_QMARK_ = pikarush.main.happening_now_QMARK_.call(null, start_dt, end_dt);
                                           if(cljs.core.truth_(pikarush.main.before_now_QMARK_.call(null, end_dt))) {
                                             return null
@@ -33152,7 +33152,7 @@ pikarush.main.event_list = function event_list() {
                                             cljs.core.PersistentVector.fromArray(["\ufdd0:span.time", [cljs.core.str(pikarush.main.time_formatter.format(start_dt)), cljs.core.str(" - "), cljs.core.str(pikarush.main.time_formatter.format(end_dt))].join("")], true), cljs.core.PersistentVector.fromArray(["\ufdd0:h4", (new cljs.core.Keyword("\ufdd0:name")).call(null, event)], true)], true), cljs.core.PersistentVector.fromArray(["\ufdd0:div.description", cljs.core.PersistentVector.fromArray(["\ufdd0:p", 
                                             (new cljs.core.Keyword("\ufdd0:description")).call(null, event)], true), cljs.core.PersistentVector.fromArray(["\ufdd0:span.location", cljs.core.PersistentVector.fromArray(["\ufdd0:strong", "Location: "], true), (new cljs.core.Keyword("\ufdd0:location")).call(null, event)], true)], true)], true)
                                           }
-                                        }(), iter__96172.call(null, cljs.core.rest.call(null, s__96173__$2)))
+                                        }(), iter__8438.call(null, cljs.core.rest.call(null, s__8439__$2)))
                                       }
                                     }else {
                                       return null
@@ -33160,14 +33160,14 @@ pikarush.main.event_list = function event_list() {
                                     break
                                   }
                                 }
-                              }(i__96154, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__96155, s__96153__$2, temp__4092__auto__), null)
+                              }(i__8420, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__8421, s__8419__$2, temp__4092__auto__), null)
                             }
-                          }(i__96154, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__96155, s__96153__$2, temp__4092__auto__);
+                          }(i__8420, mmdd, day_events, day_id, day, c__3040__auto__, size__3041__auto__, b__8421, s__8419__$2, temp__4092__auto__);
                           return iter__3042__auto__.call(null, cljs.core.range.call(null, cljs.core.count.call(null, day_events)))
                         }()], true)
                       }());
-                      var G__96190 = i__96154 + 1;
-                      i__96154 = G__96190;
+                      var G__8456 = i__8420 + 1;
+                      i__8420 = G__8456;
                       continue
                     }else {
                       return true
@@ -33175,41 +33175,41 @@ pikarush.main.event_list = function event_list() {
                     break
                   }
                 }()) {
-                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96155), iter__96152.call(null, cljs.core.chunk_rest.call(null, s__96153__$2)))
+                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8421), iter__8418.call(null, cljs.core.chunk_rest.call(null, s__8419__$2)))
                 }else {
-                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96155), null)
+                  return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8421), null)
                 }
               }else {
-                var day = cljs.core.first.call(null, s__96153__$2);
+                var day = cljs.core.first.call(null, s__8419__$2);
                 return cljs.core.cons.call(null, function() {
                   var mmdd = pikarush.main.mmdd_formatter.format(day);
                   var day_events = cljs.core.get.call(null, pikarush.main.events_by_date, mmdd);
                   var day_id = pikarush.main.id_formatter.format(day);
                   return cljs.core.PersistentVector.fromArray(["\ufdd0:div", cljs.core.PersistentVector.fromArray(["\ufdd0:h3", cljs.core.PersistentArrayMap.fromArray(["\ufdd0:id", day_id], true), pikarush.main.heading_formatter.format(day)], true), function() {
-                    var iter__3042__auto__ = function(mmdd, day_events, day_id, day, s__96153__$2, temp__4092__auto__) {
-                      return function iter__96180(s__96181) {
-                        return new cljs.core.LazySeq(null, false, function(mmdd, day_events, day_id, day, s__96153__$2, temp__4092__auto__) {
+                    var iter__3042__auto__ = function(mmdd, day_events, day_id, day, s__8419__$2, temp__4092__auto__) {
+                      return function iter__8446(s__8447) {
+                        return new cljs.core.LazySeq(null, false, function(mmdd, day_events, day_id, day, s__8419__$2, temp__4092__auto__) {
                           return function() {
-                            var s__96181__$1 = s__96181;
+                            var s__8447__$1 = s__8447;
                             while(true) {
-                              var temp__4092__auto____$1 = cljs.core.seq.call(null, s__96181__$1);
+                              var temp__4092__auto____$1 = cljs.core.seq.call(null, s__8447__$1);
                               if(temp__4092__auto____$1) {
-                                var s__96181__$2 = temp__4092__auto____$1;
-                                if(cljs.core.chunked_seq_QMARK_.call(null, s__96181__$2)) {
-                                  var c__3040__auto__ = cljs.core.chunk_first.call(null, s__96181__$2);
+                                var s__8447__$2 = temp__4092__auto____$1;
+                                if(cljs.core.chunked_seq_QMARK_.call(null, s__8447__$2)) {
+                                  var c__3040__auto__ = cljs.core.chunk_first.call(null, s__8447__$2);
                                   var size__3041__auto__ = cljs.core.count.call(null, c__3040__auto__);
-                                  var b__96183 = cljs.core.chunk_buffer.call(null, size__3041__auto__);
+                                  var b__8449 = cljs.core.chunk_buffer.call(null, size__3041__auto__);
                                   if(function() {
-                                    var i__96182 = 0;
+                                    var i__8448 = 0;
                                     while(true) {
-                                      if(i__96182 < size__3041__auto__) {
-                                        var i = cljs.core._nth.call(null, c__3040__auto__, i__96182);
-                                        cljs.core.chunk_append.call(null, b__96183, function() {
+                                      if(i__8448 < size__3041__auto__) {
+                                        var i = cljs.core._nth.call(null, c__3040__auto__, i__8448);
+                                        cljs.core.chunk_append.call(null, b__8449, function() {
                                           var event = cljs.core.nth.call(null, day_events, i);
                                           var event_id = [cljs.core.str(day_id), cljs.core.str("-event"), cljs.core.str(i)].join("");
-                                          var vec__96186 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
-                                          var start_dt = cljs.core.nth.call(null, vec__96186, 0, null);
-                                          var end_dt = cljs.core.nth.call(null, vec__96186, 1, null);
+                                          var vec__8452 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
+                                          var start_dt = cljs.core.nth.call(null, vec__8452, 0, null);
+                                          var end_dt = cljs.core.nth.call(null, vec__8452, 1, null);
                                           var event_now_QMARK_ = pikarush.main.happening_now_QMARK_.call(null, start_dt, end_dt);
                                           if(cljs.core.truth_(pikarush.main.before_now_QMARK_.call(null, end_dt))) {
                                             return null
@@ -33219,8 +33219,8 @@ pikarush.main.event_list = function event_list() {
                                             (new cljs.core.Keyword("\ufdd0:description")).call(null, event)], true), cljs.core.PersistentVector.fromArray(["\ufdd0:span.location", cljs.core.PersistentVector.fromArray(["\ufdd0:strong", "Location: "], true), (new cljs.core.Keyword("\ufdd0:location")).call(null, event)], true)], true)], true)
                                           }
                                         }());
-                                        var G__96191 = i__96182 + 1;
-                                        i__96182 = G__96191;
+                                        var G__8457 = i__8448 + 1;
+                                        i__8448 = G__8457;
                                         continue
                                       }else {
                                         return true
@@ -33228,18 +33228,18 @@ pikarush.main.event_list = function event_list() {
                                       break
                                     }
                                   }()) {
-                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96183), iter__96180.call(null, cljs.core.chunk_rest.call(null, s__96181__$2)))
+                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8449), iter__8446.call(null, cljs.core.chunk_rest.call(null, s__8447__$2)))
                                   }else {
-                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__96183), null)
+                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__8449), null)
                                   }
                                 }else {
-                                  var i = cljs.core.first.call(null, s__96181__$2);
+                                  var i = cljs.core.first.call(null, s__8447__$2);
                                   return cljs.core.cons.call(null, function() {
                                     var event = cljs.core.nth.call(null, day_events, i);
                                     var event_id = [cljs.core.str(day_id), cljs.core.str("-event"), cljs.core.str(i)].join("");
-                                    var vec__96187 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
-                                    var start_dt = cljs.core.nth.call(null, vec__96187, 0, null);
-                                    var end_dt = cljs.core.nth.call(null, vec__96187, 1, null);
+                                    var vec__8453 = cljs.core.map.call(null, cljs.core.partial.call(null, pikarush.main.parse_dt, mmdd), (new cljs.core.Keyword("\ufdd0:time")).call(null, event));
+                                    var start_dt = cljs.core.nth.call(null, vec__8453, 0, null);
+                                    var end_dt = cljs.core.nth.call(null, vec__8453, 1, null);
                                     var event_now_QMARK_ = pikarush.main.happening_now_QMARK_.call(null, start_dt, end_dt);
                                     if(cljs.core.truth_(pikarush.main.before_now_QMARK_.call(null, end_dt))) {
                                       return null
@@ -33248,7 +33248,7 @@ pikarush.main.event_list = function event_list() {
                                       cljs.core.PersistentVector.fromArray(["\ufdd0:span.time", [cljs.core.str(pikarush.main.time_formatter.format(start_dt)), cljs.core.str(" - "), cljs.core.str(pikarush.main.time_formatter.format(end_dt))].join("")], true), cljs.core.PersistentVector.fromArray(["\ufdd0:h4", (new cljs.core.Keyword("\ufdd0:name")).call(null, event)], true)], true), cljs.core.PersistentVector.fromArray(["\ufdd0:div.description", cljs.core.PersistentVector.fromArray(["\ufdd0:p", (new cljs.core.Keyword("\ufdd0:description")).call(null, 
                                       event)], true), cljs.core.PersistentVector.fromArray(["\ufdd0:span.location", cljs.core.PersistentVector.fromArray(["\ufdd0:strong", "Location: "], true), (new cljs.core.Keyword("\ufdd0:location")).call(null, event)], true)], true)], true)
                                     }
-                                  }(), iter__96180.call(null, cljs.core.rest.call(null, s__96181__$2)))
+                                  }(), iter__8446.call(null, cljs.core.rest.call(null, s__8447__$2)))
                                 }
                               }else {
                                 return null
@@ -33256,12 +33256,12 @@ pikarush.main.event_list = function event_list() {
                               break
                             }
                           }
-                        }(mmdd, day_events, day_id, day, s__96153__$2, temp__4092__auto__), null)
+                        }(mmdd, day_events, day_id, day, s__8419__$2, temp__4092__auto__), null)
                       }
-                    }(mmdd, day_events, day_id, day, s__96153__$2, temp__4092__auto__);
+                    }(mmdd, day_events, day_id, day, s__8419__$2, temp__4092__auto__);
                     return iter__3042__auto__.call(null, cljs.core.range.call(null, cljs.core.count.call(null, day_events)))
                   }()], true)
-                }(), iter__96152.call(null, cljs.core.rest.call(null, s__96153__$2)))
+                }(), iter__8418.call(null, cljs.core.rest.call(null, s__8419__$2)))
               }
             }else {
               return null
@@ -33281,49 +33281,49 @@ pikarush.main.toggle_event_descr = function toggle_event_descr(elem) {
 };
 pikarush.main.render_events = function render_events() {
   dommy.core.set_html_BANG_.call(null, document.getElementById("event-list"), dommy.core.html.call(null, pikarush.main.event_list.call(null)));
-  var seq__96196 = cljs.core.seq.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("event")));
-  var chunk__96197 = null;
-  var count__96198 = 0;
-  var i__96199 = 0;
+  var seq__8462 = cljs.core.seq.call(null, dommy.utils.__GT_Array.call(null, document.getElementsByClassName("event")));
+  var chunk__8463 = null;
+  var count__8464 = 0;
+  var i__8465 = 0;
   while(true) {
-    if(i__96199 < count__96198) {
-      var elem = cljs.core._nth.call(null, chunk__96197, i__96199);
+    if(i__8465 < count__8464) {
+      var elem = cljs.core._nth.call(null, chunk__8463, i__8465);
       dommy.core.listen_BANG_.call(null, elem, "\ufdd0:click", pikarush.main.toggle_event_descr.call(null, elem));
-      var G__96200 = seq__96196;
-      var G__96201 = chunk__96197;
-      var G__96202 = count__96198;
-      var G__96203 = i__96199 + 1;
-      seq__96196 = G__96200;
-      chunk__96197 = G__96201;
-      count__96198 = G__96202;
-      i__96199 = G__96203;
+      var G__8466 = seq__8462;
+      var G__8467 = chunk__8463;
+      var G__8468 = count__8464;
+      var G__8469 = i__8465 + 1;
+      seq__8462 = G__8466;
+      chunk__8463 = G__8467;
+      count__8464 = G__8468;
+      i__8465 = G__8469;
       continue
     }else {
-      var temp__4092__auto__ = cljs.core.seq.call(null, seq__96196);
+      var temp__4092__auto__ = cljs.core.seq.call(null, seq__8462);
       if(temp__4092__auto__) {
-        var seq__96196__$1 = temp__4092__auto__;
-        if(cljs.core.chunked_seq_QMARK_.call(null, seq__96196__$1)) {
-          var c__3073__auto__ = cljs.core.chunk_first.call(null, seq__96196__$1);
-          var G__96204 = cljs.core.chunk_rest.call(null, seq__96196__$1);
-          var G__96205 = c__3073__auto__;
-          var G__96206 = cljs.core.count.call(null, c__3073__auto__);
-          var G__96207 = 0;
-          seq__96196 = G__96204;
-          chunk__96197 = G__96205;
-          count__96198 = G__96206;
-          i__96199 = G__96207;
+        var seq__8462__$1 = temp__4092__auto__;
+        if(cljs.core.chunked_seq_QMARK_.call(null, seq__8462__$1)) {
+          var c__3073__auto__ = cljs.core.chunk_first.call(null, seq__8462__$1);
+          var G__8470 = cljs.core.chunk_rest.call(null, seq__8462__$1);
+          var G__8471 = c__3073__auto__;
+          var G__8472 = cljs.core.count.call(null, c__3073__auto__);
+          var G__8473 = 0;
+          seq__8462 = G__8470;
+          chunk__8463 = G__8471;
+          count__8464 = G__8472;
+          i__8465 = G__8473;
           continue
         }else {
-          var elem = cljs.core.first.call(null, seq__96196__$1);
+          var elem = cljs.core.first.call(null, seq__8462__$1);
           dommy.core.listen_BANG_.call(null, elem, "\ufdd0:click", pikarush.main.toggle_event_descr.call(null, elem));
-          var G__96208 = cljs.core.next.call(null, seq__96196__$1);
-          var G__96209 = null;
-          var G__96210 = 0;
-          var G__96211 = 0;
-          seq__96196 = G__96208;
-          chunk__96197 = G__96209;
-          count__96198 = G__96210;
-          i__96199 = G__96211;
+          var G__8474 = cljs.core.next.call(null, seq__8462__$1);
+          var G__8475 = null;
+          var G__8476 = 0;
+          var G__8477 = 0;
+          seq__8462 = G__8474;
+          chunk__8463 = G__8475;
+          count__8464 = G__8476;
+          i__8465 = G__8477;
           continue
         }
       }else {
