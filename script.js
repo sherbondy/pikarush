@@ -6088,7 +6088,7 @@ jb(Pj, "\ufdd0:re-render", function() {
       b = Ua(Oj);
       return va(0 > Li(a, b))
     }, Kj.c(new Ui(Jj)));
-    b = Y(["\ufdd0:div", Ac(b) ? Y(["\ufdd0:h3", "Rush is over. Hope you had a blast! ", "Feel free to stop by pika, regardless."]) : Y(["\ufdd0:ul#dates.pure-paginator", function j(a) {
+    b = Y(["\ufdd0:div", Ac(b) ? Y(["\ufdd0:h3", "Rush is over. Hope you had a blast! ", "Feel free to stop by pika regardless."]) : Y(["\ufdd0:ul#dates.pure-paginator", function j(a) {
       return new W(m, n, function() {
         for(;;) {
           var b = K(a);

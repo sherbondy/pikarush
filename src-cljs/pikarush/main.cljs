@@ -70,7 +70,7 @@
     [:div
       (if (empty? rush-days)
         [:h3 "Rush is over. Hope you had a blast! "
-             "Feel free to stop by pika, regardless."]
+             "Feel free to stop by pika regardless."]
         [:ul#dates.pure-paginator
          (for [day rush-days]
           [:li
