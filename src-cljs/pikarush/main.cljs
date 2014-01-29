@@ -12,8 +12,9 @@
    [goog.i18n.DateTimeParse :as DateTimeParse]
    [pikarush.events :refer [events]]))
 
-(def start-date (goog/date.Date. 2013 7 31))
-(def end-date   (goog/date.Date. 2013 8 7))
+;; evil dates have zero-indexed months
+(def start-date (goog/date.Date. 2014 1 1))
+(def end-date   (goog/date.Date. 2014 1 5))
 (def rush-dates (goog/date.DateRange. start-date end-date))
 
 (defn vecify
