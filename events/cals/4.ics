@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:MIT Bouldering
+DESCRIPTION:Come climb with us at the MIT bouldering wall. Meet at pika at 
+ 3:30 or on the third floor of Walker Memorial at 4. 
+DTSTART:20140302T190000Z
+DTEND:20140302T210000Z
+END:VEVENT
+END:VCALENDAR

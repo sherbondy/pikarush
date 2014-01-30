@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Hair Dyeing
+DESCRIPTION:We've got the bleach and all the colors and absolutely no train
+ ing, but want to make the colors happen
+DTSTART:20140306T010000Z
+DTEND:20140306T030000Z
+END:VEVENT
+END:VCALENDAR

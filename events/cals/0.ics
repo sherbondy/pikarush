@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Dinner and a Musical
+DESCRIPTION:You are cordially invited over for *Saturday Theme* dinner and 
+ out to watch the Musical Theater Guild's production of Little Shop of Horro
+ rs! 
+DTSTART:20140301T233000Z
+DTEND:20140302T020000Z
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Loose-Leaf Tea Party
+DESCRIPTION:Make your own revolutionary flavors of tea by combining an asso
+ rtment of provided ingredients.
+DTSTART:20140305T010000Z
+DTEND:20140305T030000Z
+END:VEVENT
+END:VCALENDAR

@@ -11,25 +11,31 @@
 
 (def events (read-string (slurp "events/spring2014.edn")))
 
-(defn ical-event [events]
-  (ical/write-object
-   [:vcalendar
-     (for [event events]
-       (let [year 2014
-             [month day]               (map-to-int (str/split (:date event) #"/"))
-              month (inc month)
-             [start-hour start-minute] (map-to-int (str/split (nth (:time event) 0) #":"))
-             [end-hour end-minute]     (map-to-int (str/split (nth (:time event) 1) #":"))]
+(defn ical-event [event]
+  (with-out-str
+    (ical/write-object
+     (let [year 2014
+           [month day]               (map-to-int (str/split (:date event) #"/"))
+            month (inc month)
+           [start-hour start-minute] (map-to-int (str/split (nth (:time event) 0) #":"))
+           [end-hour end-minute]     (map-to-int (str/split (nth (:time event) 1) #":"))]
+       [:vcalendar
          [:vevent
            [:summary (:name event)]
            [:description (:description event)]
            ;; ha, hard coding
            [:dtstart (org.joda.time.DateTime. 2014 month day start-hour start-minute)]
-           [:dtend   (org.joda.time.DateTime. 2014 month day end-hour end-minute)]]))]))
+           [:dtend   (org.joda.time.DateTime. 2014 month day end-hour end-minute)]]]))))
+
+
+(defn make-calendars [events]
+  (doseq [i (range (count events))]
+    (spit (str "events/cals/" i ".ics")
+          (ical-event (nth events i)))))
 
 (def calendar
   (with-out-str
-    (ical-event events)))
+    (ical-events events)))
 
 (spit "pika-events.ics" calendar)
 

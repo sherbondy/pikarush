@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Cocoa and Campfire
+DESCRIPTION:Drink fancy hot chocolate, warm your hands by a campfire, chill
+  on our roofdeck if the sky is clear. Festivities will begin after dinner.
+DTSTART:20140302T010000Z
+DTEND:20140302T030000Z
+END:VEVENT
+END:VCALENDAR

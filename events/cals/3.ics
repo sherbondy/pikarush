@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Firestaff making
+DESCRIPTION:Learn how to build your own firestaff, a tradition dating back 
+ to the Pikan Ancients of 1969
+DTSTART:20140302T220000Z
+DTEND:20140303T000000Z
+END:VEVENT
+END:VCALENDAR

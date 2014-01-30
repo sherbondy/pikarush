@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+BEGIN:VEVENT
+SUMMARY:Pika goes to WMBR
+DESCRIPTION:Your voice can be heard. Make an appearance on WMBR at 1 AM. Me
+ et at pika at 12:30, or Walker Memorial at 12:50.
+DTSTART:20140303T053000Z
+DTEND:20140303T071500Z
+END:VEVENT
+END:VCALENDAR
