@@ -1,8 +1,4 @@
-(ns pikarush.events)
-
-(def events
- [
-  {:name "Dinner and a Musical"
+ [{:name "Dinner and a Musical"
    :location "pika or Kresge (at 7:50pm)"
    :description "You are cordially invited over for *Saturday Theme* dinner and out to watch the Musical Theater Guild's production of Little Shop of Horrors! "
    :date "02/01"
@@ -30,7 +26,7 @@
    :location "Walker Memorial (3rd floor)"
    :description "Come climb with us at the MIT bouldering wall. Meet at pika at 3:30 or on the third floor of Walker Memorial at 4. "
    :date "02/02"
-   :time ["16:00", "18:00"]}
+   :time ["14:00", "16:00"]}
 
   {:name "Pika goes to WMBR"
    :location ""
@@ -90,5 +86,4 @@
    :location "pika"
    :description "Make some bracelets for your friends or come embroider your favorite lyric or whatever you like"
    :date "02/05"
-   :time ["17:00", "19:00"]}
-  ])
+   :time ["17:00", "19:00"]}]
