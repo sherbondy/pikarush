@@ -3,7 +3,7 @@ BEGIN:VEVENT
 SUMMARY:Roll your own Sushi Dinner
 DESCRIPTION:Have you ever wanted to make your own scrumptous sushi concocti
  on? Now's your chance. Plenty of tasty ingredients will be provided.
-DTSTART:20140303T223000Z
-DTEND:20140304T010000Z
+DTSTART:20140203T223000Z
+DTEND:20140204T010000Z
 END:VEVENT
 END:VCALENDAR

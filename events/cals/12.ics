@@ -3,7 +3,7 @@ BEGIN:VEVENT
 SUMMARY:Claymation
 DESCRIPTION:Spend the evening collaborating on your very own claymation: a 
  frame-by-frame animated short. Clay and produce will be provided.
-DTSTART:20140305T220000Z
-DTEND:20140306T000000Z
+DTSTART:20140205T220000Z
+DTEND:20140206T000000Z
 END:VEVENT
 END:VCALENDAR

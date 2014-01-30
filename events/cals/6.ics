@@ -3,7 +3,7 @@ BEGIN:VEVENT
 SUMMARY:Daxophone: an aural, tactile, mammalian experience
 DESCRIPTION:tickle it, slap it, bow it.  create sounds.  be delighted and a
  mused.
-DTSTART:20140304T010000Z
-DTEND:20140304T030000Z
+DTSTART:20140204T010000Z
+DTEND:20140204T030000Z
 END:VEVENT
 END:VCALENDAR

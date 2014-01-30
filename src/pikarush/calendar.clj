@@ -16,7 +16,6 @@
     (ical/write-object
      (let [year 2014
            [month day]               (map-to-int (str/split (:date event) #"/"))
-            month (inc month)
            [start-hour start-minute] (map-to-int (str/split (nth (:time event) 0) #":"))
            [end-hour end-minute]     (map-to-int (str/split (nth (:time event) 1) #":"))]
        [:vcalendar
@@ -33,12 +32,6 @@
     (spit (str "events/cals/" i ".ics")
           (ical-event (nth events i)))))
 
-(def calendar
-  (with-out-str
-    (ical-events events)))
-
-(spit "pika-events.ics" calendar)
-
 (defn wiki-text [events]
   (let [events-by-date (group-by :date events)
         dates (sort (keys events-by-date))]
@@ -52,4 +45,7 @@
                    "'''Location:''' " (:location event) "\n\n"
                    (:description event) "\n\n"))))))))
 
-;; (spit "events.mw" (wiki-text events))
+
+(defn -main []
+  (make-calendars events)
+  (spit "events.mw" (wiki-text events)))
