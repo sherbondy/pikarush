@@ -28,12 +28,12 @@
         dates (sort (keys events-by-date))]
     (apply str
       (for [date dates]
-        (str "=== " date " ===\n")
-        (apply str
-          (for [event (get events-by-date date)]
-            (str "==== " (:name event) " ====\n"
-                 "'''Time:''' " (first (:time event)) "-" (second (:time event)) "\n"
-                 "'''Location:''' " (:location event) "\n"
-                 (:description event) "\n")))))))
+        (str "=== " date " ===\n"
+          (apply str
+            (for [event (get events-by-date date)]
+              (str "==== " (:name event) " ====\n\n"
+                   "'''Time:''' " (first (:time event)) "-" (second (:time event)) "\n\n"
+                   "'''Location:''' " (:location event) "\n\n"
+                   (:description event) "\n\n"))))))))
 
-(spit-wiki-text events)
+(spit "events.mw" (spit-wiki-text events))
