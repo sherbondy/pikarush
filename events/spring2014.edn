@@ -16,17 +16,17 @@
    :date "02/01"
    :time ["17:00", "19:00"]}
 
-  {:name "Firestaff making"
-   :location "pika backyard"
-   :description "Learn how to build your own firestaff, a tradition dating back to the Pikan Ancients of 1969"
-   :date "02/02"
-   :time ["17:00", "19:00"]}
-
   {:name "MIT Bouldering"
    :location "Walker Memorial (3rd floor)"
    :description "Come climb with us at the MIT bouldering wall. Meet at pika at 3:30 or on the third floor of Walker Memorial at 4. "
    :date "02/02"
    :time ["15:30", "18:00"]}
+
+  {:name "Firestaff making"
+   :location "pika backyard"
+   :description "Learn how to build your own firestaff, a tradition dating back to the Pikan Ancients of 1969"
+   :date "02/02"
+   :time ["17:00", "19:00"]}
 
   {:name "Pika goes to WMBR"
    :location ""
