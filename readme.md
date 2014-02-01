@@ -1,6 +1,7 @@
 # For Danny, and the Future YFNMFCC
 
 This is gonna be awesome.
+It lives [here](https://github.com/sherbondy/pikarush)
 
 1. Install [leiningen](http://leiningen.org/)
 2. From the command line, do: `lein run`
