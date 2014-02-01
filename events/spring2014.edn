@@ -1,4 +1,10 @@
- [{:name "Dinner and a Musical"
+ [{:name "Murph Yurt Bean Traders"
+   :location "pika sexdungeon (Dining Room)"
+   :description "lounge twice indoors, gaining leguminous leverage in this well rounded and easy to learn card game.  no skill required.  lack of skill preferred."
+   :date "02/01"
+   :time ["17:00", "19:00"]}
+
+  {:name "Dinner and a Musical"
    :location "pika or Kresge (at 7:50pm)"
    :description "You are cordially invited over for *Saturday Theme* dinner and out to watch the Musical Theater Guild's production of Little Shop of Horrors! "
    :date "02/01"
@@ -9,12 +15,6 @@
    :description "Drink fancy hot chocolate, warm your hands by a campfire, chill on our roofdeck if the sky is clear. Festivities will begin after dinner."
    :date "02/01"
    :time ["20:00", "22:00"]}
-
-  {:name "Murph Yurt Bean Traders"
-   :location "pika sexdungeon (Dining Room)"
-   :description "lounge twice indoors, gaining leguminous leverage in this well rounded and easy to learn card game.  no skill required.  lack of skill preferred."
-   :date "02/01"
-   :time ["17:00", "19:00"]}
 
   {:name "MIT Bouldering"
    :location "Walker Memorial (3rd floor)"
