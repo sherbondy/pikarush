@@ -7,6 +7,8 @@
                  [clj-time "0.6.0"]]
   :plugins [[lein-cljsbuild "0.3.2"]]
 
+  :main pikarush.calendar
+
   :cljsbuild
     {:builds
 
